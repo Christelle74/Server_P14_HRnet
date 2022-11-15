@@ -1,6 +1,6 @@
 const express = require('express')//import du paquet express
 require('dotenv').config({path:'./config/.env'})
-require('./models/dbConfig')
+require('./config/dbConfig')
 const employeesRoutes = require('./routes/employeesController')
 const bodyParser = require('body-parser')
 const cors = require('cors')
