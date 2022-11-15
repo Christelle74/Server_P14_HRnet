@@ -1,4 +1,4 @@
-![logo](/hrnet/public/wealthHealth.png)
+![logo](/img/wealthHealth.png)
 
 
 
