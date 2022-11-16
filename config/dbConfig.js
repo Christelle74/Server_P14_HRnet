@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 mongoose.connect(
-    "mongodb://" + process.env.EMPLOYEES_API,
+    "mongodb+srv://" + process.env.EMPLOYEES_API  + "@p14server.8czggyi.mongodb.net/ServerP14HRnet",
     { useNewUrlParser: true, useUnifiedTopology: true }, 
     (err)=> {
         if(!err) console.log("Connected to MongoDB");
