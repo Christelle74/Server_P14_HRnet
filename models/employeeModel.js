@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const EmployeeModel = mongoose.model(
-    "node-employees",
+    "ServerP14HRnet",
     {
         id :{ type: String, required: true},
         firstName:{ type: String, required:true, minLength: 3},
@@ -11,7 +11,7 @@ const EmployeeModel = mongoose.model(
         street:{ type: String, required:true},
         city:{ type: String, required:true, minLength: 2},
         state:{ type: String, required:true},
-        zipcode:{ type: String, required:true, minLength: 5},
+        zipcode:{ type: String, required:true, minLength: 3},
         department:{ type: String, required:true},
     },
     "employees"
