@@ -9,8 +9,9 @@ const cors = require('cors')
 const app = express()
 
 const corsOptions={
-    origin:process.env.CLIENT_URL,
-    'methods':'GET, POST, DELETE'
+    origin:'*',
+    'methods':'GET, POST, DELETE',
+    'preflightContinue': false
 }
 
 app.use(bodyParser.json())
