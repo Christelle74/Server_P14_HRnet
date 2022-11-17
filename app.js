@@ -1,5 +1,5 @@
 const express = require('express')//import du paquet express
-require('dotenv').config({path:'./config/.env'})
+require('dotenv').config({path:'.env'})
 require('./config/dbConfig')
 const employeesRoutes = require('./routes/employeesController')
 const bodyParser = require('body-parser')
@@ -9,7 +9,7 @@ const cors = require('cors')
 const app = express()
 
 const corsOptions={
-    origin:'*',
+    'origin':'*',
     'methods':'GET, POST, DELETE',
     'preflightContinue': false
 }
