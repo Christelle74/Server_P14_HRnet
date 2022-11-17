@@ -2,10 +2,10 @@
   "name": "backend-hrnet",
   "version": "1.0.0",
   "description": "backend of hrnet",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app"
+    "start": "nodemon index"
   },
   "author": "Christelle74",
   "license": "ISC",
