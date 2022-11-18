@@ -17,7 +17,11 @@ const corsOptions={
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(cors(corsOptions))// give external access
-app.use('/employees', employeesRoutes)// '/' = url/employees
+app.use('/', employeesRoutes)// '/' = url/employees
+
+app.get('/', (_req, res) => {
+    res.send("Hello World !!");
+})
 
 
 //start the server and listen the given port
@@ -25,8 +29,6 @@ app.listen(process.env.PORT, () => {
     console.log(`Listening on port ${process.env.PORT}`)
 })
 
-app.get('/', (_req, res) => {
-    res.send("Hello World !!");
-  })
+
 
 
