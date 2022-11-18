@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
+//connect to mongodb atlas
 mongoose.connect(
-    // "mongodb+srv://" + process.env.EMPLOYEES_API  + "@p14server.8czggyi.mongodb.net/ServerP14HRnet" || 
     process.env.MONGODB_URI,
     { useNewUrlParser: true, useUnifiedTopology: true}, 
     (err)=> {

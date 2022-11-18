@@ -2,11 +2,11 @@ const express = require("express")
 const router = express.Router()
 const ObjectId = require('mongoose').Types.ObjectId
 
-const  { EmployeeModel } = require("../models/employeeModel")
+const { EmployeeModel }= require("../models/employeeModel")
 
 
-// get route
-router.get('/employees', (req, res) => {
+// get employees route
+router.get('/', (req, res) => {
     EmployeeModel.find((err, docs) => {
         if(!err) res.send(docs);
         else console.log("Error to get data :" + err)
@@ -14,10 +14,10 @@ router.get('/employees', (req, res) => {
 })
 
 
-//post route
-router.post('/employees', (req, res) => {
+//post employee route
+router.post('/', async(req, res) => {
     console.log(req.body.values)
-    const newEmployee = new EmployeeModel({
+    const newEmployee = await new EmployeeModel({
         ...req.body.values   
     })
 
@@ -29,7 +29,7 @@ router.post('/employees', (req, res) => {
 
 
 //delete route
-router.delete('/employees/:id', (req, res)=>{
+router.delete('/:id', (req, res)=>{
     if(!ObjectId.isValid(req.params.id))
         return res.status(400).send("ID unknown :" + req.params.id)
 
