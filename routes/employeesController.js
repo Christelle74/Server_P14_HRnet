@@ -7,9 +7,9 @@ const { EmployeeModel }= require("../models/employeeModel")
 
 // get employees route
 router.get('/', (req, res) => {
-    EmployeeModel.find((error, docs) => {
-        if(!error) res.send(docs);
-        else console.log("Error to get data :" + error)
+    EmployeeModel.find((err, docs) => {
+        if(!err) res.send(docs);
+        else console.log("Error to get data :" + err)
     })
 })
 
@@ -21,9 +21,9 @@ router.post('/', async(req, res) => {
         ...req.body.values   
     })
 
-    newEmployee.save((error, docs)=>{
-        if(!error) res.send(docs);
-        else console.log("Error to create new data :" + error)
+    newEmployee.save((err, docs)=>{
+        if(!err) res.send(docs);
+        else console.log("Error to create new data :" + err)
     })
 })
 
