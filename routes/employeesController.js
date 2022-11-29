@@ -16,9 +16,9 @@ router.get('/', (req, res) => {
 
 //post employee route
 router.post('/', async(req, res) => {
-    console.log(req.body.values)
+    console.log(req.body)
     const newEmployee = await new EmployeeModel({
-        ...req.body.values   
+        ...req.body   
     })
 
     newEmployee.save((err, docs)=>{
